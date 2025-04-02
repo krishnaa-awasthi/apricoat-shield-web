@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -52,16 +53,32 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
-				}
+				apricoat: {
+					50: '#f0f7ff',
+					100: '#e0eefe',
+					200: '#baddfe',
+					300: '#7cc1fd',
+					400: '#48a5fa',
+					500: '#2085f1',
+					600: '#0e63e4',
+					700: '#0c4ebd',
+					800: '#10409c',
+					900: '#113a7c',
+					950: '#0d2250',
+				},
+				coral: {
+					50: '#fff8f6',
+					100: '#ffeee9',
+					200: '#ffddd5',
+					300: '#ffc0b0',
+					400: '#ff9882',
+					500: '#ff6e54',
+					600: '#f24a31',
+					700: '#d72912',
+					800: '#b22512',
+					900: '#932415',
+					950: '#500f08',
+				},
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +101,21 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				fadeIn: {
+					'0%': { opacity: '0' },
+					'100%': { opacity: '1' }
+				},
+				slideUp: {
+					'0%': { transform: 'translateY(20px)', opacity: '0' },
+					'100%': { transform: 'translateY(0)', opacity: '1' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fadeIn 0.5s ease-in-out',
+				'slide-up': 'slideUp 0.5s ease-out'
 			}
 		}
 	},
